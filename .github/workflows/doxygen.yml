@@ -36,7 +36,7 @@ jobs:
     - name: Build project and generate documentation
       run: |
         cd build
-        cmake --build . --target doxygen
+        cmake --build . --target doc
         cd ..
 
     - name: Generate Doxygen documentation
