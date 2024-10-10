@@ -1,0 +1,29 @@
+<GMLFeatureClassList>
+  <GMLFeatureClass>
+    <Name>DividedRouteFeature</Name>
+    <ElementPath>DividedRouteFeature</ElementPath>
+    <GeometryName>centerlines</GeometryName>
+    <GeometryElementPath>centerlines</GeometryElementPath>
+    <!--MULTILINESTRING-->
+    <GeometryType>5</GeometryType>
+    <SRSName>CRS:84</SRSName>
+    <DatasetSpecificInfo>
+      <FeatureCount>1</FeatureCount>
+      <ExtentXMin>-0.00320</ExtentXMin>
+      <ExtentXMax>-0.00260</ExtentXMax>
+      <ExtentYMin>-0.00240</ExtentYMin>
+      <ExtentYMax>0.00240</ExtentYMax>
+    </DatasetSpecificInfo>
+    <PropertyDefn>
+      <Name>name</Name>
+      <ElementPath>name</ElementPath>
+      <Type>String</Type>
+      <Width>8</Width>
+    </PropertyDefn>
+    <PropertyDefn>
+      <Name>num_lanes</Name>
+      <ElementPath>num_lanes</ElementPath>
+      <Type>Integer</Type>
+    </PropertyDefn>
+  </GMLFeatureClass>
+</GMLFeatureClassList>

@@ -1,0 +1,29 @@
+<GMLFeatureClassList>
+  <GMLFeatureClass>
+    <Name>PondFeature</Name>
+    <ElementPath>PondFeature</ElementPath>
+    <GeometryName>shore</GeometryName>
+    <GeometryElementPath>shore</GeometryElementPath>
+    <!--MULTIPOLYGON-->
+    <GeometryType>6</GeometryType>
+    <SRSName>CRS:84</SRSName>
+    <DatasetSpecificInfo>
+      <FeatureCount>1</FeatureCount>
+      <ExtentXMin>-0.00200</ExtentXMin>
+      <ExtentXMax>-0.00140</ExtentXMax>
+      <ExtentYMin>0.00160</ExtentYMin>
+      <ExtentYMax>0.00200</ExtentYMax>
+    </DatasetSpecificInfo>
+    <PropertyDefn>
+      <Name>name</Name>
+      <ElementPath>name</ElementPath>
+      <Type>Untyped</Type>
+    </PropertyDefn>
+    <PropertyDefn>
+      <Name>type</Name>
+      <ElementPath>type</ElementPath>
+      <Type>String</Type>
+      <Width>10</Width>
+    </PropertyDefn>
+  </GMLFeatureClass>
+</GMLFeatureClassList>

@@ -1,0 +1,29 @@
+<GMLFeatureClassList>
+  <GMLFeatureClass>
+    <Name>AutoFeature</Name>
+    <ElementPath>AutoFeature</ElementPath>
+    <GeometryName>position</GeometryName>
+    <GeometryElementPath>position</GeometryElementPath>
+    <!--POINT-->
+    <GeometryType>1</GeometryType>
+    <SRSName>CRS:84</SRSName>
+    <DatasetSpecificInfo>
+      <FeatureCount>19</FeatureCount>
+      <ExtentXMin>-0.00320</ExtentXMin>
+      <ExtentXMax>0.00290</ExtentXMax>
+      <ExtentYMin>-0.00220</ExtentYMin>
+      <ExtentYMax>0.00220</ExtentYMax>
+    </DatasetSpecificInfo>
+    <PropertyDefn>
+      <Name>num</Name>
+      <ElementPath>num</ElementPath>
+      <Type>Integer</Type>
+    </PropertyDefn>
+    <PropertyDefn>
+      <Name>time</Name>
+      <ElementPath>time</ElementPath>
+      <Type>String</Type>
+      <Width>20</Width>
+    </PropertyDefn>
+  </GMLFeatureClass>
+</GMLFeatureClassList>

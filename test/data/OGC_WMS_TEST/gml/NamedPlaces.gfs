@@ -1,0 +1,24 @@
+<GMLFeatureClassList>
+  <GMLFeatureClass>
+    <Name>NamedPlaceFeature</Name>
+    <ElementPath>NamedPlaceFeature</ElementPath>
+    <GeometryName>boundary</GeometryName>
+    <GeometryElementPath>boundary</GeometryElementPath>
+    <!--POLYGON-->
+    <GeometryType>3</GeometryType>
+    <SRSName>CRS:84</SRSName>
+    <DatasetSpecificInfo>
+      <FeatureCount>2</FeatureCount>
+      <ExtentXMin>0.00140</ExtentXMin>
+      <ExtentXMax>0.00420</ExtentXMax>
+      <ExtentYMin>-0.00110</ExtentYMin>
+      <ExtentYMax>0.00240</ExtentYMax>
+    </DatasetSpecificInfo>
+    <PropertyDefn>
+      <Name>name</Name>
+      <ElementPath>name</ElementPath>
+      <Type>String</Type>
+      <Width>12</Width>
+    </PropertyDefn>
+  </GMLFeatureClass>
+</GMLFeatureClassList>

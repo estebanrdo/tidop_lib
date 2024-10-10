@@ -1,0 +1,24 @@
+<GMLFeatureClassList>
+  <GMLFeatureClass>
+    <Name>ForestFeature</Name>
+    <ElementPath>ForestFeature</ElementPath>
+    <GeometryName>boundary</GeometryName>
+    <GeometryElementPath>boundary</GeometryElementPath>
+    <!--MULTIPOLYGON-->
+    <GeometryType>6</GeometryType>
+    <SRSName>CRS:84</SRSName>
+    <DatasetSpecificInfo>
+      <FeatureCount>1</FeatureCount>
+      <ExtentXMin>-0.00140</ExtentXMin>
+      <ExtentXMax>0.00420</ExtentXMax>
+      <ExtentYMin>-0.00240</ExtentYMin>
+      <ExtentYMax>0.00180</ExtentYMax>
+    </DatasetSpecificInfo>
+    <PropertyDefn>
+      <Name>name</Name>
+      <ElementPath>name</ElementPath>
+      <Type>String</Type>
+      <Width>12</Width>
+    </PropertyDefn>
+  </GMLFeatureClass>
+</GMLFeatureClassList>

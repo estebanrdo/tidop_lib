@@ -1,0 +1,29 @@
+<GMLFeatureClassList>
+  <GMLFeatureClass>
+    <Name>LakeFeature</Name>
+    <ElementPath>LakeFeature</ElementPath>
+    <GeometryName>shore</GeometryName>
+    <GeometryElementPath>shore</GeometryElementPath>
+    <!--POLYGON-->
+    <GeometryType>3</GeometryType>
+    <SRSName>CRS:84</SRSName>
+    <DatasetSpecificInfo>
+      <FeatureCount>3</FeatureCount>
+      <ExtentXMin>0.00060</ExtentXMin>
+      <ExtentXMax>0.00310</ExtentXMax>
+      <ExtentYMin>-0.00180</ExtentYMin>
+      <ExtentYMax>-0.00010</ExtentYMax>
+    </DatasetSpecificInfo>
+    <PropertyDefn>
+      <Name>name</Name>
+      <ElementPath>name</ElementPath>
+      <Type>String</Type>
+      <Width>9</Width>
+    </PropertyDefn>
+    <PropertyDefn>
+      <Name>elev</Name>
+      <ElementPath>elev</ElementPath>
+      <Type>Integer</Type>
+    </PropertyDefn>
+  </GMLFeatureClass>
+</GMLFeatureClassList>

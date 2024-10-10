@@ -1,0 +1,121 @@
+/**************************************************************************
+ *                                                                        *
+ * Copyright (C) 2021 by Tidop Research Group                             *
+ * Copyright (C) 2021 by Esteban Ruiz de Oña Crespo                       *
+ *                                                                        *
+ * This file is part of TidopLib                                          *
+ *                                                                        *
+ * TidopLib is free software: you can redistribute it and/or modify       *
+ * it under the terms of the GNU Lesser General Public License as         *
+ * published by the Free Software Foundation, either version 3 of the     *
+ * License, or (at your option) any later version.                        *
+ *                                                                        *
+ * TidopLib is distributed in the hope that it will be useful,            *
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of         *
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the          *
+ * GNU Lesser General Public License for more details.                    *
+ *                                                                        *
+ * You should have received a copy of the GNU Lesser General Public       *
+ * License along with TidopLib. If not, see <http://www.gnu.org/licenses>.*
+ *                                                                        *
+ * @license LGPL-3.0 <https://www.gnu.org/licenses/lgpl-3.0.html>         *
+ *                                                                        *
+ **************************************************************************/
+ 
+#ifndef TL_CONFIG_H
+#define TL_CONFIG_H
+
+/* Cabecera para configuración */
+
+#define TL_VERSION_MAJOR @TidopLib_VERSION_MAJOR@
+#define TL_VERSION_MINOR @TidopLib_VERSION_MINOR@
+#define TL_VERSION_PATCH @TidopLib_VERSION_PATCH@
+#define TL_VERSION "@TidopLib_VERSION@"
+
+
+#cmakedefine TL_ENABLE_DEPRECATED_METHODS 
+#cmakedefine TL_WARNING_DEPRECATED_METHOD
+#cmakedefine TL_WARNING_TODO
+
+/* TidopLib Modules */
+
+#cmakedefine TL_HAVE_CORE
+#cmakedefine TL_HAVE_MATH
+#cmakedefine TL_HAVE_GEOMETRY
+#cmakedefine TL_HAVE_IMG
+#cmakedefine TL_HAVE_IMG_PROCESS
+#cmakedefine TL_HAVE_FEAT_MATCH
+#cmakedefine TL_HAVE_GRAPHIC
+#cmakedefine TL_HAVE_GEOSPATIAL
+#cmakedefine TL_HAVE_VECT
+
+/* TidopLib dependencies */
+
+// Boost
+#cmakedefine TL_HAVE_BOOST
+
+// OpenCV
+#cmakedefine TL_HAVE_OPENCV
+
+// GDAL
+#cmakedefine TL_HAVE_GDAL
+
+#cmakedefine TL_HAVE_PROJ
+#cmakedefine TL_HAVE_PROJ4
+
+// libraw: Lectura de formato raw
+#cmakedefine TL_HAVE_LIBRAW
+#cmakedefine TL_HAVE_EDSDK
+
+// Eigen Lib
+#cmakedefine TL_HAVE_EIGEN
+
+// OpenMP
+#cmakedefine TL_HAVE_OPENMP
+
+// Parallel Patterns Library
+// https://msdn.microsoft.com/es-es/library/dd492418.aspx
+#cmakedefine TL_HAVE_PPL
+
+// Visual Leak Detector
+#cmakedefine TL_HAVE_VLD
+
+// minizip
+#cmakedefine TL_HAVE_MINIZIP
+
+#cmakedefine TL_HAVE_OPENBLAS
+#cmakedefine TL_HAVE_CUDA
+
+
+// SIMD INTRINSICS
+#cmakedefine TL_HAVE_SSE 
+#cmakedefine TL_HAVE_SSE2
+#cmakedefine TL_HAVE_SSE3
+#cmakedefine TL_HAVE_SSE4_1
+#cmakedefine TL_HAVE_SSE4_2
+#cmakedefine TL_HAVE_AVX
+#cmakedefine TL_HAVE_AVX2
+#cmakedefine TL_HAVE_AVX512
+#cmakedefine TL_HAVE_SIMD_INTRINSICS
+
+#define TL_DATA_PATH "${CMAKE_SOURCE_DIR}\\test\\data"
+
+/// https://philippegroarke.com/blog/2017/11/20/simplifying-compile-time-options-with-if-constexpr/
+
+#define CPP_VERSION @CMAKE_CXX_STANDARD@
+
+namespace tl
+{
+
+enum class CppVersion {
+  //cpp_11 = 11, 
+  cpp_14 = 14, 
+  cpp_17 = 17, 
+  cpp_20 = 20
+};
+
+constexpr static CppVersion cpp_version = static_cast<CppVersion>(@CMAKE_CXX_STANDARD@);
+
+}
+
+#endif // TL_CONFIG_H
