@@ -25,12 +25,12 @@ jobs:
       run: |
         mkdir build
         cd build
-        cmake .. -DWITH_OPENCV=ON
-                 -DWITH_GDAL=ON
-                 -DWITH_PROJ=ON
-                 -DBUILD_APPS=OFF
-                 -DBUILD_TEST=OFF
-                 -DBUILD_DOC=ON
+        cmake .. -DWITH_OPENCV=ON \
+                 -DWITH_GDAL=ON \
+                 -DWITH_PROJ=ON \
+                 -DBUILD_APPS=OFF \
+                 -DBUILD_TEST=OFF \
+                 -DBUILD_DOC=ON \ 
                  -DWITH_CUDA=OFF
         cd ..
 
