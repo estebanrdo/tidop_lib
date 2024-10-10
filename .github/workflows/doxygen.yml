@@ -32,6 +32,12 @@ jobs:
                  -DBUILD_TEST=OFF \
                  -DBUILD_DOC=ON
         cd ..
+        
+    - name: Build project and generate documentation
+      run: |
+        cd build
+        cmake --build . --target doxygen
+        cd ..
 
     - name: Generate Doxygen documentation
       run: doxygen doc/Doxyfile
