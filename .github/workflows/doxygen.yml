@@ -25,14 +25,14 @@ jobs:
       run: |
         mkdir build
         cd build
-        cmake .. -DTIDOPLIB_CXX_STANDARD=20 \
-                 -DWITH_OPENCV=ON \
-                 -DWITH_GDAL=ON \
-                 -DWITH_PROJ=ON \
-                 -DBUILD_APPS=OFF \
-                 -DBUILD_TEST=OFF \
-                 -DBUILD_DOC=ON \
-                 -DWITH_CUDA=OFF \
+        cmake .. -DTIDOPLIB_CXX_STANDARD=c++20
+                 -DWITH_OPENCV=ON
+                 -DWITH_GDAL=ON
+                 -DWITH_PROJ=ON
+                 -DBUILD_APPS=OFF
+                 -DBUILD_TEST=OFF
+                 -DBUILD_DOC=ON
+                 -DWITH_CUDA=OFF
         cd ..
 
     - name: Generate Doxygen documentation
