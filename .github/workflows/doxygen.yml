@@ -16,8 +16,15 @@ jobs:
     - name: Install Doxygen
       run: sudo apt-get install doxygen graphviz -y
 
+    - name: Generate Doxyfile with CMake
+      run: |
+        mkdir build
+        cd build
+        cmake ..
+        cd ..
+
     - name: Generate Doxygen documentation
-      run: doxygen Doxyfile
+      run: doxygen doc/Doxyfile
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
