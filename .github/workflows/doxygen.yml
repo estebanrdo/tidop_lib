@@ -30,8 +30,7 @@ jobs:
                  -DWITH_PROJ=ON \
                  -DBUILD_APPS=OFF \
                  -DBUILD_TEST=OFF \
-                 -DBUILD_DOC=ON \ 
-                 -DWITH_CUDA=OFF
+                 -DBUILD_DOC=ON
         cd ..
 
     - name: Generate Doxygen documentation
