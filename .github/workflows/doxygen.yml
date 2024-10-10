@@ -16,7 +16,7 @@ jobs:
     - name: Install dependencies
       run: |
         sudo apt-get update
-        sudo apt-get install -y libopencv-dev libgdal-dev libboost-all-dev
+        sudo apt-get install -y libfmt-dev libopencv-dev libgdal-dev libboost-all-dev
         
     - name: Install Doxygen
       run: sudo apt-get install doxygen graphviz -y
@@ -25,8 +25,7 @@ jobs:
       run: |
         mkdir build
         cd build
-        cmake .. -DTIDOPLIB_CXX_STANDARD=c++20
-                 -DWITH_OPENCV=ON
+        cmake .. -DWITH_OPENCV=ON
                  -DWITH_GDAL=ON
                  -DWITH_PROJ=ON
                  -DBUILD_APPS=OFF
