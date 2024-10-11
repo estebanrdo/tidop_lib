@@ -2,7 +2,7 @@ name: Generate Doxygen Docs
 
 on:
   push:
-    branches: ["main", "gh-pages"]
+    branches: ["main"]
     tags:
       - '*.*.*'  # Ejecutar el workflow cuando se empuje un tag que siga el patrón de versiones (X.X.X)
   # Allows you to run this workflow manually from the Actions tab
@@ -22,19 +22,21 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+
       - name: Install dependencies
-	    if: startsWith(github.ref, 'refs/tags/')
+        if: startsWith(github.ref, 'refs/tags/')
         run: |
           sudo apt-get update
-          sudo apt-get install -y libfmt-dev libopencv-dev libgdal-dev libproj-dev   libboost-all-dev
+          sudo apt-get install -y libfmt-dev libopencv-dev libgdal-dev libproj-dev libboost-all-dev
+      
       - name: Install Doxygen
-	    if: startsWith(github.ref, 'refs/tags/')
+        if: startsWith(github.ref, 'refs/tags/')
         run: sudo apt-get install doxygen graphviz -y
       - name: Install Doxygen
-	    if: startsWith(github.ref, 'refs/tags/')
+        if: startsWith(github.ref, 'refs/tags/')
         run: sudo apt-get install doxygen graphviz -y		
       - name: Generate Doxyfile with CMake
-	    if: startsWith(github.ref, 'refs/tags/')
+        if: startsWith(github.ref, 'refs/tags/')
         run: |
           mkdir build
           cd build
@@ -44,10 +46,11 @@ jobs:
                    -DBUILD_APPS=OFF \
                    -DBUILD_TEST=OFF \
                    -DBUILD_DOC=ON
-          cmake --build . --target doc		
+          cmake --build . --target doc
+		  
       - name: Generate Doxygen documentation
         run: doxygen ./build/doc/Doxyfile		  
-		  
+  
   # Deployment job
   deploy:
     environment:
@@ -70,7 +73,3 @@ jobs:
           force_orphan: false
           enable_jekyll: false
           disable_nojekyll: true
-        keep_files: false
-        force_orphan: false
-        enable_jekyll: false
-        disable_nojekyll: true
