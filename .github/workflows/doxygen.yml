@@ -31,20 +31,14 @@ jobs:
                  -DBUILD_APPS=OFF \
                  -DBUILD_TEST=OFF \
                  -DBUILD_DOC=ON
-        cd ..
-        
-    - name: Build project and generate documentation
-      run: |
-        cd build
         cmake --build . --target doc
-        cd ..
 
     - name: Generate Doxygen documentation
-      run: doxygen ./build/doc/Doxyfile
+      run: doxygen ./doc/Doxyfile
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./docs/html
+        publish_dir: ./html
         publish_branch: gh-pages
