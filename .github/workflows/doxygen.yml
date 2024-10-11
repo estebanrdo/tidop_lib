@@ -46,7 +46,7 @@ jobs:
                    -DBUILD_TEST=OFF \
                    -DBUILD_DOC=ON
           cmake --build . --target doc
-		  
+  
       - name: Generate Doxygen documentation
         run: doxygen ./build/doc/Doxyfile		  
   
