@@ -34,14 +34,13 @@ jobs:
         cmake --build . --target doc
 
     - name: Generate Doxygen documentation
-      run: doxygen ./build/doc/Doxyfile
+      run: doxygen ./doc/Doxyfile
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./doc/html
-        folder: html
+        publish_dir: ./html
         publish_branch: gh-pages
         allow_empty_commit: false
         keep_files: false
