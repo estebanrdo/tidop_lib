@@ -42,6 +42,7 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./html
         publish_branch: gh-pages
+        destination_dir: 3.1.0
         allow_empty_commit: false
         keep_files: false
         force_orphan: false
